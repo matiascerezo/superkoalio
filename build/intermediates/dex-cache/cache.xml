@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\ALUMNEDAM\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-box2d\1.9.6\c249ef4060a4fada952f278455c8f7b9cba3c18a\gdx-box2d-1.9.6.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c249ef4060a4fada952f278455c8f7b9cba3c18a">
+        <dex dex="C:\Users\ALUMNEDAM\Desktop\Matias\DAM\M8\superkoalio\android\build\intermediates\pre-dexed\debug\gdx-box2d-1.9.6_516f16e4792661595295998cabc9f9c84be563ef.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ALUMNEDAM\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx\1.9.6\47d1e9b890e364ec28f128e9bb3b9a12a94c164\gdx-1.9.6.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="047d1e9b890e364ec28f128e9bb3b9a12a94c164">
+        <dex dex="C:\Users\ALUMNEDAM\Desktop\Matias\DAM\M8\superkoalio\android\build\intermediates\pre-dexed\debug\gdx-1.9.6_5674d99015883c9bcb6e7ac3e28763d08aab2689.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ALUMNEDAM\Desktop\Matias\DAM\M8\superkoalio\core\build\libs\core-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ffa1da03e4aa2871edca5f13ff5c3721d4c0016a">
+        <dex dex="C:\Users\ALUMNEDAM\Desktop\Matias\DAM\M8\superkoalio\android\build\intermediates\pre-dexed\debug\core-1.0_5961a2f60d31eb8a30d87c9cd0306cc8a01fb449.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ALUMNEDAM\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-backend-android\1.9.6\57c2831c870743712b808384187ea856e541878f\gdx-backend-android-1.9.6.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="57c2831c870743712b808384187ea856e541878f">
+        <dex dex="C:\Users\ALUMNEDAM\Desktop\Matias\DAM\M8\superkoalio\android\build\intermediates\pre-dexed\debug\gdx-backend-android-1.9.6_ab00c17f677420cf64ed924956e3ba751db5f945.jar" />
+    </item>
+
+</items>
