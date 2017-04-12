@@ -1,6 +1,14 @@
 [
     {
+        "merged": "C:\\Users\\Sandra\\Desktop\\matichuli\\superkoalio\\android\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
+        "source": "C:\\Users\\Sandra\\Desktop\\matichuli\\superkoalio\\android\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
         "merged": "C:\\Users\\ALUMNEDAM\\Desktop\\Matias\\DAM\\M8\\superkoalio\\android\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
         "source": "C:\\Users\\ALUMNEDAM\\Desktop\\Matias\\DAM\\M8\\superkoalio\\android\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\FRANCISCO\\Desktop\\Matias\\superkoalio\\android\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
+        "source": "C:\\Users\\FRANCISCO\\Desktop\\Matias\\superkoalio\\android\\res\\drawable-hdpi\\ic_launcher.png"
     }
 ]
