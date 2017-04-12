@@ -9,7 +9,9 @@ import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
+import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 
 import javax.annotation.Resources;
 
@@ -20,10 +22,11 @@ public class AssetManager {
     public static TextureRegion background;
     public static TextureRegion[] regions;
     public static Texture koalaTexture;
-    public static Image imgLogo;
+    public static Image imgLogo, imgNombre;
     public static Animation<TextureRegion> stand;
     public static Animation<TextureRegion> walk;
     public static Animation<TextureRegion> jump;
+    public static ImageButton btnJugar, btnReiniciar, btnVictoria, btnNivelOk;
 
     public static Drawable background1;
 
@@ -37,19 +40,37 @@ public class AssetManager {
     public static void load() {
 
         // Carreguem les textures
-        sheet = new Texture(Gdx.files.internal("sheet1.jpg"));
+        sheet = new Texture(Gdx.files.internal("sheet2.jpg"));
         sheet.setFilter(Texture.TextureFilter.Nearest, Texture.TextureFilter.Nearest);
+
 
         // Sprites del Koala
         koalaTexture = new Texture("koalio.png");
         imgLogo = new Image(new Texture("logo.png"));
+        imgNombre = new Image(new Texture("buttons/SuperKoalio.png"));
+
+        Texture imgJugar = new Texture("buttons/Jugar.png");
+        Drawable drawable = new TextureRegionDrawable(new TextureRegion(imgJugar));
+        btnJugar = new ImageButton(drawable);
+
+        Texture imgReiniciar = new Texture("buttons/Reiniciar.png");
+        Drawable drawable1 = new TextureRegionDrawable(new TextureRegion(imgReiniciar));
+        btnReiniciar = new ImageButton(drawable1);
+
+        Texture imgVictoria = new Texture("buttons/Enhorabuena.png");
+        Drawable drawable2 = new TextureRegionDrawable(new TextureRegion(imgVictoria));
+        btnVictoria = new ImageButton(drawable2);
+
+        Texture imgLevel = new Texture("buttons/FullLevel.png");
+        Drawable drawable3 = new TextureRegionDrawable(new TextureRegion(imgLevel));
+        btnNivelOk = new ImageButton(drawable3);
 
         regions = TextureRegion.split(koalaTexture, 18, 26)[0];
 
         //Background
         background = new TextureRegion(sheet,3,3,1022,768);
         //background = new TextureRegion(sheet,0,0,700,390);
-        background.flip(false,true);
+        background.flip(false,false);
 
         background1 = new Image(new Texture("background1.png")).getDrawable();
 
@@ -79,9 +100,9 @@ public class AssetManager {
 
         /******************************* Text *************************************/
         // Font space
-        FileHandle fontFile = Gdx.files.internal("fonts/fuente.fnt");
+        /*FileHandle fontFile = Gdx.files.internal("fonts/fuente.fnt");
         font = new BitmapFont(fontFile, false);
-        font.getData().setScale(1.8f);
+        font.getData().setScale(1.8f);*/
     }
 
     public static void dispose() {

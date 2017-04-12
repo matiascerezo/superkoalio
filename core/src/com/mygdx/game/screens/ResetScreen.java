@@ -7,9 +7,11 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Container;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
+import com.badlogic.gdx.utils.viewport.StretchViewport;
 import com.mygdx.game.KoalaGame;
 import com.mygdx.game.helpers.AssetManager;
 
@@ -33,41 +35,51 @@ public class ResetScreen implements Screen {
 
         Gdx.app.log("ResetScreen", "He entrado");
 
-        stage = new Stage();
-
         camera = new OrthographicCamera();
-        camera.setToOrtho(false, 30, 20);
+        camera.setToOrtho(false, 1024, 768);
         camera.update();
+
+        StretchViewport viewport = new StretchViewport(1024,768, camera);
+        stage = new Stage(viewport);
 
         // Afegim el fons
         stage.addActor(new Image(AssetManager.background));
         textButtonStyle = new TextButton.TextButtonStyle();
         textButtonStyle.font = AssetManager.font;
         //Afegim el text de titul
-        textStyle = new Label.LabelStyle(AssetManager.font, null);
+        //textStyle = new Label.LabelStyle(AssetManager.font, null);
 
 
-        textTitle = new Label("¡Enhorabuena, has completado el nivel!", textStyle);
+        //textTitle = new Label("¡Enhorabuena, has completado el nivel!", textStyle);
 
-        Container container = new Container(textTitle);
+        /*Container container = new Container(textTitle);
         container.setTransform(true);
         container.center();
         container.setPosition(330, 230);
 
-        reiniciar = new TextButton("Reiniciar", textButtonStyle);
+        reiniciar = new TextButton("Reiniciar", textButtonStyle);*/
 
-        Container contJugar = new Container(reiniciar);
+        /*Container contJugar = new Container(reiniciar);
         contJugar.setTransform(true);
         contJugar.center();
         contJugar.setPosition(330, 70);
 
         textButtonStyle.font.getData().setScale(1.2f);
-        textStyle.font.getData().setScale(1.2f);
+        textStyle.font.getData().setScale(1.2f);*/
+        ImageButton reiniciar = AssetManager.btnReiniciar;
+        reiniciar.setPosition(370,100);
 
-        stage.addActor(container);
-        stage.addActor(contJugar);
+        ImageButton victoria = AssetManager.btnVictoria;
+        victoria.setPosition(280,390);
 
-        contJugar.addListener(new ChangeListener() {
+        ImageButton mensajeNivel = AssetManager.btnNivelOk;
+        mensajeNivel.setPosition(260,290);
+
+        stage.addActor(reiniciar);
+        stage.addActor(victoria);
+        stage.addActor(mensajeNivel);
+
+        reiniciar.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
                 ResetScreen.this.game.setScreen(new Superkoalio(game));
